@@ -25,12 +25,12 @@ The prompt asks the model to **“Think step by step”** in its ordinary comple
 
 | Split | Trajectories | Mean Brier ↓ | Invalid outputs |
 | :--- | ---: | ---: | ---: |
-| Visible dev | 300 | **0.3394493333** | 25 |
-| Hidden test | 500 | **0.3573658000** | 44 |
+| Visible dev | 300 | **0.339** | 25 |
+| Hidden test | 500 | **0.357** | 44 |
 
 These are the initial starter measurements from pilot `cp_20261013_072041`. The exported prompt, sampling settings, message construction, and parser match that starter. Stochastic sampling and server batching can affect reproduction.
 
-A constant prediction of 0.5 scores **0.25** on either split, providing a useful reference.
+A constant prediction of 0.5 scores **0.250** on either split, providing a useful reference.
 
 ## Setup
 
