@@ -1,0 +1,11 @@
+{
+  "exact_prompt_and_sampling_preserved": true,
+  "exact_probability_parser_and_scorer_preserved": true,
+  "all_300_saved_dev_outputs_parse_identically": true,
+  "mocked_inference_contract_checked": true,
+  "synthetic_saved_output_brier_check": 0.0625,
+  "python_syntax_and_cli_help_checked": true,
+  "full_gpu_inference_rerun": false,
+  "new_container_build_tested": false,
+  "contains_real_dataset_or_model_weights": false
+}

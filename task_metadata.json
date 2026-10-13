@@ -1,0 +1,89 @@
+{
+  "task_title": "long_horizon_search_verifier_calibration_coevolution",
+  "initial_model": "Qwen/Qwen3.5-0.8B",
+  "model_revision": "2fc06364715b967f1860aea9cf38778875588b17",
+  "starter_thinking": false,
+  "max_new_tokens": 4096,
+  "model_output": "Optional step-by-step verification; final line must be a bare probability number in [0,1].",
+  "metric": "mean Brier score; lower is better; missing/invalid probability loss1",
+  "data_source": "https://huggingface.co/datasets/liuqi6777/bcp_search_agent_trajectory",
+  "source_repository": "https://github.com/liuqi6777/search_agent",
+  "split_config_id": "958c23d2be54f899f1d3dc345b126d792fb6060a4bbcabc97f501aace0d306d6",
+  "counts": {
+    "train": {
+      "rows": 2825,
+      "questions": 561,
+      "positive": 2224,
+      "negative": 601
+    },
+    "dev": {
+      "rows": 300,
+      "questions": 70,
+      "positive": 150,
+      "negative": 150
+    },
+    "hidden_test": {
+      "rows": 500,
+      "questions": 198,
+      "positive": 253,
+      "negative": 247
+    }
+  },
+  "visible_file_hashes": {
+    "train_inputs.jsonl": {
+      "bytes": 825594044,
+      "sha256": "8657df5da08b6f5519c7cc3040b6f62d8272088602cc4695bb42c3d6b1ca94f4"
+    },
+    "dev_inputs.jsonl": {
+      "bytes": 124520623,
+      "sha256": "9b93dbca57814e276ca3956b8c9667841bd988a74a4f7bcf3be4937f2674741d"
+    },
+    "train_labels.jsonl": {
+      "bytes": 169500,
+      "sha256": "1951958e793ad4af39954d733b97528685e24fd1a359ae327ae0beda9a56c80c"
+    },
+    "train_groups.jsonl": {
+      "bytes": 364425,
+      "sha256": "95a0aee45bf33e04f3d8cdb4e4acbbf918f6db97b669849fafd50591172116cc"
+    },
+    "dev_labels.jsonl": {
+      "bytes": 18000,
+      "sha256": "46fa546f217f6d6e3bd769f6178d7139d4fbace385d98d3724b60c11af09a3ce"
+    },
+    "dev_groups.jsonl": {
+      "bytes": 38700,
+      "sha256": "c29338d5e9abc1172c76705bc6592d17d7970063544d99f668fc0fb0ba3917e6"
+    }
+  },
+  "development": {
+    "gpus": 1,
+    "gpu_model": "RTX A6000",
+    "gpu_memory_gib": 48,
+    "pilot_seconds": 21600
+  },
+  "evaluation": {
+    "gpus": 1,
+    "wall_seconds": 7200
+  },
+  "training": "Pure LoRA model parameter updates via TRL trainers; train only. Dev for evaluation and selection only; calibration fitting uses train only.",
+  "observed_starter_metrics": {
+    "dev": {
+      "n": 300,
+      "brier": 0.33944933333333327,
+      "invalid": 25
+    },
+    "hidden": {
+      "n": 500,
+      "brier": 0.35736580000000007,
+      "invalid": 44
+    }
+  },
+  "excluded_from_download": [
+    "model weights",
+    "real trajectory datasets",
+    "hidden questions/labels/predictions",
+    "optimized solutions and adapters",
+    "Codex credentials/control bridge",
+    "other model sizes or thinking setups"
+  ]
+}

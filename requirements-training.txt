@@ -1,0 +1,13 @@
+# Tested Python3.12 training environment; install CUDA PyTorch wheels at build time.
+torch==2.8.0
+transformers==5.19.0
+tokenizers==0.23.3
+trl==1.15.0
+peft==0.21.2
+accelerate==1.15.0
+datasets==5.1.0
+safetensors==0.8.0
+huggingface-hub==2.2.0
+numpy==2.5.4
+pandas==3.0.6
+psutil

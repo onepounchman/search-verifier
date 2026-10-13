@@ -1,0 +1,24 @@
+# Python runtime files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Model weights, checkpoints, generated outputs and local datasets
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.bin
+/checkpoints/
+/models/
+/cache/
+/outputs/
+/data/
+
+# Local credentials and settings
+.env
+.env.*
+auth.json
+*.pem
+*.key
