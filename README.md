@@ -185,7 +185,6 @@ Model updates must use pure LoRA through TRL. Original base weights, model archi
 | [task_metadata.json](task_metadata.json) | Split counts, data hashes, and starter measurements |
 | [verification.json](verification.json) | Export verification record |
 | [examples/](examples/) | Synthetic inputs, labels, and ID-list examples |
-| [MANIFEST.sha256](MANIFEST.sha256) | Package checksums |
 
 <details>
 <summary><strong>Package scope and benchmark integration</strong></summary>
